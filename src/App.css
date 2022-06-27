@@ -1,0 +1,65 @@
+body {
+  background: url("https://www.parl.org/hs-fs/hubfs/2020/all_together_transparent.png?width=300&height=300&name=all_together_transparent.png")
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.animal {
+  flex-direction: row;
+  display: flex;
+  padding: 15px;
+  justify-content:stretch
+  
+}
+.animals {
+  background-color: antiquewhite;
+  
+  border: black 2px dotted;
+  width: 200px;
+
+  
+
+  
+
+}
