@@ -17,7 +17,7 @@ const handleSubmit = (event) => {
 
 return (
     <>
-  
+        <div className='add-section'>
     <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name: </label>
           <input type="text" name="name" value={animal.name} onChange={handleChange} />
@@ -39,6 +39,7 @@ return (
         <br/><br/>                   
         <input type="submit" />
     </form>
+    </div>
     </>
 )
 

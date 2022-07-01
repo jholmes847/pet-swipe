@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Add from './components/login/Add'
-
-import axios from 'axios'
+// import React, { Components } from "react"
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Shelter from "./components/Pages/Shelter"; 
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
-const App =()=> {
+
+const App =(props)=> {
   const [animal, setAnimal] = useState([])
   const [showAnimal, setShowAnimal] = useState(false)
 
@@ -41,7 +44,7 @@ const App =()=> {
   return (
     <>
   <h1 className='title'>Pet-Swipe</h1>
-  <header>
+  {/* <header>
     <div class="container clearfix">   
 
 <div class= "navbar-wrapper">
@@ -55,23 +58,30 @@ const App =()=> {
                         </span>
                         <span class="icon-bar"> 
                         <button className="btn"> <a href="./page2">Shelters</a></button>
+                       
                         </span>
                         <span class="icon-bar">
                         <button className="btn"><a href="{'./page3'}">Volunenteer</a></button>
                          </span>
                         </button>
-                   
-                   
-                        
-                       
-                </div>
-                
-                
+                               
+                </div>    
         </nav>
     </div>
 </div>
 </div>
-</header>
+</header> */}
+
+<Router>
+            <Routes>
+                {/* <Route path='/' element={<Home/>} /> */}
+                <Route path='/shelter' element={<Shelter/>} />
+                {/* <Route path='/create' element={<CreateEvent/>} /> */}
+            </Routes>      
+         
+        </Router>
+{/* const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />); */}
 
  
   
@@ -87,7 +97,7 @@ const App =()=> {
  {animal.map((animal) => {
    return (
      <div className="animals" key={animal.id}>
-       <img src={animal.img} />
+       <h4>Name: {animal.name}</h4>
        <h5>Age: {animal.age}</h5>
        <h6>Breed: {animal.breed}</h6>
        <h7>Color: {animal.color}</h7>
