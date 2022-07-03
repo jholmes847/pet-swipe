@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-function Shelter (props) {
+function Volunteer (props) {
     return (
     
-      <h1> Shelter</h1>
+      <h1>Volunteer Events</h1>
   
     );
   }
   
-  Shelter.propTypes = {
+  Volunteer.propTypes = {
     window: PropTypes.func,
   };
   
-  export default Shelter;
+  export default Volunteer;

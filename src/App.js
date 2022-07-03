@@ -3,9 +3,10 @@ import './App.css';
 import Add from './components/login/Add'
 // import React, { Components } from "react"
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Shelter from "./components/Pages/Shelter"; 
+import Shelter from "./Pages/Shelter"; 
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Volunteer from './Pages/Volunteer';
 
 
 const App =(props)=> {
@@ -44,7 +45,7 @@ const App =(props)=> {
   return (
     <>
   <h1 className='title'>Pet-Swipe</h1>
-  {/* <header>
+  <header>
     <div class="container clearfix">   
 
 <div class= "navbar-wrapper">
@@ -57,11 +58,11 @@ const App =(props)=> {
                         <span class="icon-bar">
                         </span>
                         <span class="icon-bar"> 
-                        <button className="btn"> <a href="./page2">Shelters</a></button>
+                        <button className="btn">  </button>
                        
                         </span>
                         <span class="icon-bar">
-                        <button className="btn"><a href="{'./page3'}">Volunenteer</a></button>
+                        <button className="btn"><a href="{'./page3'}">Volunteer</a></button>
                          </span>
                         </button>
                                
@@ -70,18 +71,18 @@ const App =(props)=> {
     </div>
 </div>
 </div>
-</header> */}
+</header>
 
 <Router>
             <Routes>
-                {/* <Route path='/' element={<Home/>} /> */}
-                <Route path='/shelter' element={<Shelter/>} />
-                {/* <Route path='/create' element={<CreateEvent/>} /> */}
+               
+                <Route path='/Shelter' element={<Shelter/>} />
+                <Route path='/Volunteer' element={<Volunteer/>} />
+            
             </Routes>      
          
         </Router>
-{/* const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />); */}
+
 
  
   
