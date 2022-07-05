@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const Add = (props) => {
-    const emptyAnimal = {name:'', age:'',breed:'',color:'', location:'' }
+    const emptyAnimal = {name:'' ,img:'', age:'',breed:'',color:'', location:'' }
 
 const [animal, setAnimal] = useState(emptyAnimal)    
 
@@ -11,7 +11,7 @@ const handleChange = (event) => {
 const handleSubmit = (event) => {
   event.preventDefault()
   props.handleCreate(animal)
-  setAnimal({name:'', age:'',breed:'',color:'', location:'' })
+  setAnimal({name:'', img:'', age:'',breed:'',color:'', location:'' })
 }
 
 
@@ -22,6 +22,9 @@ return (
     <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name: </label>
           <input type="text" name="name" value={animal.name} onChange={handleChange} />
+        <br/><br/>
+        <label htmlFor="img">Image: </label>
+          <input type="text" name="img" value={animal.img} onChange={handleChange} />
         <br/><br/>
         
     <label htmlFor="age">Age: </label>
