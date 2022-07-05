@@ -15,6 +15,7 @@ const handleSubmit = (event) => {
 }
 
 
+
 return (
     <>
         <div className='add-section'>
@@ -22,9 +23,7 @@ return (
         <label htmlFor="name">Name: </label>
           <input type="text" name="name" value={animal.name} onChange={handleChange} />
         <br/><br/>
-        <label htmlFor="img">Image: </label>
-          <input type="url" name="img" value={animal.img} onChange={handleChange} />
-        <br/><br/>
+        
     <label htmlFor="age">Age: </label>
           <input type="text" name="age" value={animal.age} onChange={handleChange} />
         <br/><br/>

@@ -1,12 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Add from './components/login/Add'
-// import React, { Components } from "react"
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Shelter from "./Pages/Shelter"; 
+
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Volunteer from './Pages/Volunteer';
+
 
 
 const App =(props)=> {
@@ -37,6 +35,13 @@ const App =(props)=> {
         getAnimal()
       })
   }
+  const handleDelete = (event) => {
+    axios
+      .delete('http://localhost:8000/api/animals/' + event.target.value)
+      .then((response) => {
+        getAnimal()
+      })
+  }
 
    useEffect(() => {
     getAnimal()
@@ -58,7 +63,7 @@ const App =(props)=> {
                         <span class="icon-bar">
                         </span>
                         <span class="icon-bar"> 
-                        <button className="btn">  </button>
+                        <button className="btn">Shelter  </button>
                        
                         </span>
                         <span class="icon-bar">
@@ -73,15 +78,6 @@ const App =(props)=> {
 </div>
 </header>
 
-<Router>
-            <Routes>
-               
-                <Route path='/Shelter' element={<Shelter/>} />
-                <Route path='/Volunteer' element={<Volunteer/>} />
-            
-            </Routes>      
-         
-        </Router>
 
 
  
@@ -104,7 +100,10 @@ const App =(props)=> {
        <h7>Color: {animal.color}</h7>
        <br></br>
        <h8>Location: {animal.location}</h8>
-
+       <br></br>
+       <button onClick={handleDelete} value={animal.id}>
+  X
+</button>
      </div>
    )
  })}
