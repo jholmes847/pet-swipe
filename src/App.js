@@ -47,13 +47,7 @@ const App =(props)=> {
         getAnimal()
       })
   }
-  const DisplayVolunteer = () => {
-    return(
-      <>
-        <Volunteer />
-      </>
-    )
-  }
+ 
 
    useEffect(() => {
     getAnimal()
@@ -81,7 +75,8 @@ const App =(props)=> {
  
    <div className="animal">
  
-  <button className="btn" onClick={toggleAdd}>Add Animal</button>
+  <button className="btn" onClick={toggleAdd}>A
+  <br></br>D<br></br>D<br></br><br></br> A<br></br>N<br></br>I<br></br>M<br></br>A<br></br>L</button>
         {showAnimal == true ?
  
   <Add handleCreate={handleCreate} />
@@ -101,6 +96,7 @@ const App =(props)=> {
        <button className='x-btn' onClick={handleDelete} value={animal.id}>
   X
 </button>
+<br></br>
      </div>
    )
  })}

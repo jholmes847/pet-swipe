@@ -1,3 +1,8 @@
-.shelter {
-    background-color: beige;
-}
+.btn {
+    background-color: #535353;
+    color: #000;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }

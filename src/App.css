@@ -92,3 +92,12 @@ body {
   background-color: beige;
   width: 300px;
 }
+
+.btn {
+  background-color: #535353;
+  color: #000;
+}
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
