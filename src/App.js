@@ -6,6 +6,7 @@ import Volunteer from './components/volunteer';
 import {Routes, Route} from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Shelter from './components/shelter';
 
 
 
@@ -13,6 +14,8 @@ const App =(props)=> {
   const [animal, setAnimal] = useState([])
   const [showAnimal, setShowAnimal] = useState(false)
   const [showVolunteer, setShowVolunteer] = useState(false)
+  const [showShelter, setShelter] = useState(false)
+  
   const toggleAdd = () => {
 		setShowAnimal(!showAnimal)
 	}
@@ -62,9 +65,18 @@ const App =(props)=> {
   
 <Nav />
 
-
+ <nav>
+  <button className ="btn btn-warning" onClick={()=>setShelter(s=>!s)} > Shelters Near Me</button>
+   { showShelter ?
+    <Shelter/>
+    : "" }
 
  
+  <button className ="btn btn-warning" onClick={()=>setShowVolunteer(s=>!s)} >Volunteer</button>
+   { showVolunteer ?
+    <Volunteer/>
+   : ""  }
+ </nav>
   
  
    <div className="animal">

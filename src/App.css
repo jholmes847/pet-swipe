@@ -46,10 +46,10 @@ body {
 }
 
 .animal {
+  display:flex;
   flex-direction: row;
-  display: flex;
-  padding: 15px;
-  justify-content:stretch
+ flex-wrap: wrap;
+  margin: auto;
   
 }
 .animals {
@@ -75,4 +75,20 @@ body {
   transform: rotate(45deg);
   background-color: #282c34;
   color: white;
+}
+
+.shelter-name {
+  margin: auto;
+  background-color: grey;
+  width: 200px;
+}
+
+.city {
+  margin: auto;
+}
+
+.shelter {
+  margin: auto;
+  background-color: beige;
+  width: 300px;
 }
