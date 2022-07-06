@@ -12,6 +12,7 @@ const Shelter = (props) => {
     <p>North Central Animal Shelter
       <br></br>
       3201 Lacy St, Los Angeles, CA 90031</p>
+    
     <p>Paws of L.A. Rescue
       <br></br>
       545 San Pedro St, Los Angeles, CA 90013</p>
